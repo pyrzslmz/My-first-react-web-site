@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+html,body {
+  margin: 0;
+  background-color: rgb(37, 37, 37);
+  scroll-behavior: smooth !important;
+}
+
+#video-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#video video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#menu {
+  width: 205vh !important;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 1s, color 1s,text-shadow 1s;
+}
+
+#menu:hover{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  .logo{
+    color: #000000;
+    text-shadow: 0 0 2px black;
+  }
+  a{
+    color: black;
+  }
+}
+
+#menu a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+#menu a:hover{
+  text-shadow: 0 0 5px black;
+}
+
+#menu img{
+  width: 40px !important;
+  height: 40px !important;
+}
+
+#white-menu{
+  color: black;
+  background-color: white;
+  text-shadow: 0 0 2px black;
+}
+
+.logo{
+  font-family: 'Bebas Neue' !important;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  font-size: 50px !important;
+  margin-left: 50vh !important;
+  text-shadow: 0 0 10px white;
+  padding-right: 60vh !important;
+}
+@media screen and (min-width: 768px) {
+  #menu {
+      width: 50% !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #menu {
+      width: 100% !important;
+      text-align: center !important;
+  }
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  color: #000000;
+  padding: 20px;
+  border: none;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  z-index: 9999;
+  text-align: center;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px black ;
+}
+
+#popup h2 {
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+#popup button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  
+}
+
+#popup button:hover {
+  background-color: #0b3856;
+}
+
+.scroll-downs {
+  position: absolute;
+  top: 70vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  
+  width :34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+#content {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#content2{
+  background-image: url(img/arka.png);
+  /* background: rgb(83,83,83);
+  background: linear-gradient(0deg, rgba(83,83,83,1) 0%, rgba(0,0,0,1) 100%); */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+#urunler {
+  text-align: center;
+}
+.urun {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  float: left;  
+}
+
+#urunler{
+  padding: 10px;
+}
+
+#content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.grid {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  float: left;
+}
+
+.grid img {
+  transition: transform 0.3s;
+}
+
+.grid #girl{
+  width: 60vh !important;
+  height: 70vh !important;
+  margin-top: 10vh;
+}
+
+.grid #man{
+  width: 55vh !important;
+  height: 75vh;
+  margin-top: 10vh;
+  margin-left: 5vh;
+}
+
+.grid:hover img {
+  transform: scale(1.1);
+}
+
+.grid .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s;
+}
+
+.grid:hover .text {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.urunler{
+  width: 1000px;
+  height: 500px;
+  background: url(img/arkapm.png);
+  margin-top: 25vh;
+  margin-left: 48vh;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px black;
+  box-shadow: 0 0 50px rgb(0, 0, 0);
+  color: white;
+
+  h1{
+    margin: 50px;
+    margin-top: -48vh !important;
+    font-size: 50px;
+    font-family: 'Bebas Neue' !important;
+  }
+  h3{
+    margin-left: 30px;
+    margin-top: -20px !important;
+    text-decoration: underline;
+  }
+
+  img{
+    margin-left: 52vh;
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  button{
+    background-color: #00000000;
+    color: white;
+    border-color: #00000000;
+    font-weight:bolder;
+    font-size: 15px;
+  }
+  #beden{
+    margin-left: 30px;
+    margin-top: -10px;
+    padding: 0;
+  }
+  #beden:hover{
+    text-shadow: 0 5px 5px white;
+  }
+  #beden:focus{
+    text-shadow: 0 0 5px white;
+    text-decoration: underline;
+  }
+  #nokta{
+    margin-left: 102vh;
+    margin-top: -30vh;
+    color: #000000de;
+    -webkit-text-stroke: 2px solid black;
+    font-size: 30px;
+  }
+  #nokta:focus{
+    color: #8c0090de;
+    stroke: 2px black;
+    font-size: 35px;
+  }
+  #rnk{
+    margin-top: 3vh !important;
+  }
+  #rnkle{
+    font-size: 50px !important;
+    margin-left: 25px;
+    margin-top: -30px;
+    padding: 0;
+  }
+  .rnk1{
+    color: palevioletred !important;
+    text-shadow: 0 0 5px #000000;
+  }
+  .rnk2{
+    color: rgb(8, 8, 8) !important;
+    text-shadow: 0 0 5px #000000;
+  }
+  .rnk1:focus{
+    text-shadow: 0 0 5px #ffffff;
+  }
+  .rnk2:focus{
+    text-shadow: 0 0 5px #ffffff;
+  }
+  p{
+    margin-top: -5vh;
+    margin-left: 30px;
+  }
+  h4{
+    margin-left: 30px;
+    margin-top: -5px;
+  }
+  #satın{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    margin-left: 30px;
+    margin-top: -10px;
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+  }
+  #satın:hover{
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+  }
+}
+.popup2 {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+}
+
+.popup-icerik2 {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.kapat {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.kapat:hover {
+  color: black;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Oyun satış sitesi" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script src="js/resm.js"></script>
+    <script src="js/sepet.js"></script>
+    <title>Anasayfa</title>
+</head>
+<body>
+
+<div id="popup">
+    <p>Merhaba, Sizlere daha iyi hizmet sunabilmemiz için bize yardımcı olabilir misiniz? <br> Lütfen cinsiyetinizi belirleyerek deneyiminizi özelleştirmemize izin verin. Teşekkür ederiz!</p>
+    <button onclick="selectGender('male')">Erkek</button>
+    <button onclick="selectGender('female')">Kadın</button>
+    <button onclick="selectGender('blrsz')">Belirtmek İstemiyorum</button>
+</div>
+
+<div id="video-container">
+  <div id="menu">
+      <a href="#video-container">Anasayfa</a>
+      <a href="#content">Ürünler</a>
+      <a href="#content2">Yeni Sezon</a>
+      <a class="logo" href="index.html">Aurelio Montré</a>
+      <a onclick="popupGoster()" href="#">Sepet</a>
+      <a href="#">Kayıt Ol / Giriş</a>
+  </div>
+<center>
+  <div id="popup2" class="popup2">
+    <div class="popup-icerik2">
+      <span class="kapat" onclick="kapatPopup()">&times;</span>
+      <h2>Sepet</h2>
+      <ul id="sepetListesiPopup"></ul>
+      <p id="toplamFiyatPopup">Toplam: $0</p>
+      <button onclick="onaylaSatinAlma()">Satın Al</button>
+    </div>
+  </div>
+</center>
+  <a href="#content"><div class="scroll-downs">
+    <div class="mousey" id="byz">
+      <div class="scroller"></div>
+    </div>
+  </div></a>
+  <div id="video">
+      <video autoplay loop muted>
+          <source src="untitled.mp4" type="video/mp4">
+          Sizin tarayıcınız video desteklemiyor.
+      </video>
+  </div>
+</div>
+
+<div id="content">
+  <center>
+  <a href="kadın.html"><div class="grid">
+    <img id="girl" src="img/girl.jpg" alt="">
+    <div class="text">Kadın</div>
+  </div></a>
+  <a href="erkek.html"><div class="grid">
+    <img id="man" src="img/man.jpg" alt="">
+    <div class="text">Erkek</div>
+  </div></a></center>
+</div>
+
+<div id="content2" class="slider-container">
+    <div class="urunler">
+      <a href="newsea.html"><img id="on" src="img/kıyafet1.png" alt=""></a>
+      <h1>La Sirène</h1>
+      <h3>Beden</h3>
+      
+      <button id="beden">S</button>
+      <button id="beden">M</button>
+      <button id="beden">L</button>
+      <h3 id="rnk">Renkler</h3>
+      <button onclick="pembe()" class="rnk1" id="rnkle">•</button>
+      <button onclick="siyah()" class="rnk2" id="rnkle">•</button><br><br><br>
+      <p>Lorem ipsum dolor sit, amet consectetur <br> adipisicing elit. Maiores </p>
+      <h4>345,79$</h4>
+      <button onclick="sepetEkle()" id="satın">Satın Al</button>
+    </div>
+</div>
+
+<div id="root"></div>
+<script src="js/popup.js"></script>
+</body>
+</html>

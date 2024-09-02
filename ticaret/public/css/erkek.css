@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+html,body {
+    margin: 0;
+    background-color: rgb(37, 37, 37);
+    scroll-behavior: smooth !important;
+    overflow-x: hidden !important;
+  }
+
+#menu {
+    width: 205vh !important;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    color: #fff;
+    cursor: pointer;
+    left: -10px;
+    top: -3px;
+    transition: background-color 1s, color 1s,text-shadow 1s;
+  }
+  
+  #menu:hover{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    .logo{
+      color: #000000;
+      text-shadow: 0 0 2px black;
+    }
+    a{
+      color: black;
+    }
+  }
+  
+  #menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+  }
+  
+  #menu a:hover{
+    text-shadow: 0 0 5px black;
+  }
+  
+  #menu img{
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .logo{
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    font-size: 50px !important;
+    margin-left: 50vh !important;
+    text-shadow: 0 0 10px white;
+    padding-right: 60vh !important;
+  }
+  @media screen and (min-width: 768px) {
+    #menu {
+        width: 50% !important;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    #menu {
+        width: 100% !important;
+        text-align: center !important;
+    }
+  }
+
+  #filtre{
+    margin-top: 16vh;
+    margin-left: 5vh;
+    width: 15vh;
+    height: 5vh;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    transition: background-color 1s, color 1s;
+  img{
+    width: 16px;
+    height: 16px;
+    padding-right: 5px;
+  }
+}
+ 
+#filtre:hover{
+  background-color: white;
+  color: rgb(37, 37, 37);
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap; /* Yeterli alan yoksa satırları kır */
+  justify-content: space-around; /* Ürün kartlarını yatayda hizalamak için */
+}
+
+.product-card {
+  width: 300px;
+  padding: 16px;
+  box-shadow: 0px 4px 8px rgba(63, 63, 63, 0.1);
+  text-align: center;
+  margin-bottom: 20px; /* İstediğiniz boşlukları ayarlamak için */
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.product-name {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.product-description {
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #666;
+}
+
+.fiyat {
+  color: white;
+}
